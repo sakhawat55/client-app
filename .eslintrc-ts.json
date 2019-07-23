@@ -1,0 +1,26 @@
+{
+  "extends": "./.eslintrc.json",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    // disable the base rule as it can report incorrect errors
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2, {
+      "VariableDeclarator": {"var": 2, "let": 2, "const": 3},
+      "SwitchCase": 1,
+      "FunctionExpression": {"parameters": "first"}
+    }],
+    "@typescript-eslint/class-name-casing": ["error"],
+    "@typescript-eslint/interface-name-prefix": ["error", "always"],
+    "@typescript-eslint/member-ordering": ["error", {"default": [
+      "public-field",
+      "private-field",
+      "public-method",
+      "private-method"
+    ]}],
+    "@typescript-eslint/no-use-before-define": ["error", {"functions": false, "typedefs": false, "classes": false}],
+    "@typescript-eslint/no-var-requires": ["error"],
+    "@typescript-eslint/type-annotation-spacing": ["error", {"before": true, "after": true}]
+  }
+}
