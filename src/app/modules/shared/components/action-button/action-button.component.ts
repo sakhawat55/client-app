@@ -4,7 +4,7 @@ import {Input} from '@angular/core';
 
 @Component({
   selector: 'cli-action-button',
-  templateUrl: './action-button.component.html',
+  template: `<button routerLink="{{getRouterLink()}}">{{buttonConfig.text}}</button>`,
   styleUrls: ['./action-button.component.scss']
 })
 export class ActionButtonComponent implements OnInit {
