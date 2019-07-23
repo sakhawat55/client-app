@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'cli-greetings',
   templateUrl: './greetings.component.html',
-  styleUrls: ['./greetings.component.css']
+  styleUrls: ['./greetings.component.scss']
 })
 export class GreetingsComponent implements OnInit {
 
