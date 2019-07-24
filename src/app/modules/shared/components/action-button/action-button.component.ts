@@ -8,7 +8,7 @@ import {Input} from '@angular/core';
   styleUrls: ['./action-button.component.scss']
 })
 export class ActionButtonComponent implements OnInit {
-  @Input() buttonConfig: ActionButtons;
+  @Input() buttonConfig: ActionButtons | null;
 
   constructor() {}
 
@@ -16,7 +16,7 @@ export class ActionButtonComponent implements OnInit {
   }
 
   getRouterLink(): string {
-    return this.buttonConfig.routerLink;
+    return this.buttonConfig && this.buttonConfig.routerLink ? this.buttonConfig.routerLink : '/';
   }
 
 }

@@ -9,8 +9,7 @@
  */
 Error.stackTraceLimit = Infinity;
 
-require('core-js/es6');
-require('core-js/es7/reflect');
+require('core-js');
 
 require('zone.js/dist/zone');
 require('zone.js/dist/long-stack-trace-zone');
@@ -35,6 +34,8 @@ testing.TestBed.initTestEnvironment(browser.BrowserDynamicTestingModule, browser
  * we say do this recursively
  */
 var testContext = require.context('../src', true, /\.(test|spec).ts/);
+
+// var testContext = require.context('../src', true, /action-button.component.spec/);
 
 /**
  * Get all the files, for each file, call the context function
