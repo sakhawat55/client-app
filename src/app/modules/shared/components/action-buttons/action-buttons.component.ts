@@ -3,7 +3,10 @@ import {ActionButtons} from '../../interfaces';
 
 @Component({
   selector: 'cli-action-buttons',
-  templateUrl: './action-buttons.component.html',
+  template: `<div *ngFor="let buttonConfig of getConfigForActionButtons()">
+  <cli-action-button [buttonConfig]="buttonConfig"></cli-action-button>
+</div>
+`,
   styleUrls: ['./action-buttons.component.scss']
 })
 export class ActionButtonsComponent {
