@@ -35,7 +35,6 @@ describe("ActionButtonComponent", () => {
     expect(component).toBeTruthy();
   });
   it("should render button based on incoming config", () => {
-    console.log(123);
-    expect(1).toEqual(2);
+    expect(component.getRouterLink()).toEqual('/');
   });
 });
