@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {ActionButtons} from '../../interfaces';
 
 @Component({
@@ -13,10 +13,14 @@ export class ActionButtonsComponent {
   {type: 'reference', text: 'twitter news', routerLink: 'twitter'},
   {type: 'reference', text: 'github gags', routerLink: 'github'}
 ]
- constructor() { }
+  @Input() buttonsConfig: ActionButtons[];
+  constructor() { }
 
- getConfigForActionButtons(): ActionButtons[] {
+  getConfigForActionButtons(): ActionButtons[] {
+    if (this.buttonsConfig) {
+      return this.buttonsConfig;
+    }
 
-   return this.greetingButtonsConfig;
- }
+    return this.greetingButtonsConfig;
+  }
 }
