@@ -29,7 +29,7 @@ module.exports = {
         test: /\.ts$/,
         use: [
           {
-            loader: 'ts-loader'
+            loader: 'awesome-typescript-loader'
           },
           'angular-router-loader',
           'angular2-template-loader'
@@ -54,12 +54,16 @@ module.exports = {
           helpers.root('src/index.html')
         ]
       },
+      // {
+      //   test: /\.html$/,
+      //   loader: 'raw-loader',
+      //   exclude: [
+      //     helpers.root('src/index.html')
+      //   ]
+      // },
       {
         test: /\.html$/,
-        loader: 'raw-loader',
-        exclude: [
-          helpers.root('src/index.html')
-        ]
+        loader: 'html-loader'
       },
       {
         enforce: 'post',
