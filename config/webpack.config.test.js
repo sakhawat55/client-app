@@ -27,16 +27,17 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        use: [
+        loaders: [
           {
-            loader: 'ts-loader'
+            loader: 'awesome-typescript-loader',
+            options: {
+              configFileName: helpers.root('tsconfig.json')
+            }
           },
-          'angular-router-loader',
-          'angular2-template-loader'
+          'angular2-template-loader',
+          'angular-router-loader'
         ],
-        exclude: [
-          /\.e2e\.ts$/
-        ]
+        exclude: [/node_modules/, /\.e2e\.ts$/]
       },
       {
         test: /[\/\\]@angular[\/\\]core[\/\\].+\.js$/,

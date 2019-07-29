@@ -2,15 +2,13 @@
   "name": "chatfront",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
     "build:dev": "npm run webpack-dev",
     "build:prod": "npm run webpack-prod",
     "wpds": "NODE_ENV=webpack-dev-server webpack-dev-server --config './webpack.config.js' -d --inline --hot --progress --port 9090",
     "install:dev-tools:for-building": "npm install --only=dev",
     "webpack-dev": "NODE_ENV=development webpack --config './webpack.config.js'",
     "webpack-prod": "NODE_ENV=production webpack --config './webpack.config.js'",
-    "test": "NODE_ENV=test karma start ./src/karma.conf.js",
+    "test": "node_modules/.bin/karma start ./karma.conf.js",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
