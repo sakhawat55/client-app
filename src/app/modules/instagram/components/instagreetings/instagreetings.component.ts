@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FetchInstaPeopleService} from '../../services/fetch-insta-people.service';
+import {FetchInstaPeopleService} from '../../services/userSelf/fetch-insta-people.service';
 
 @Component({
   selector: 'instagreetings',

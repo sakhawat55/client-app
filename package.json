@@ -1,5 +1,5 @@
 {
-  "name": "chatfront",
+  "name": "client-app",
   "version": "0.0.0",
   "scripts": {
     "build:dev": "npm run webpack-dev",
