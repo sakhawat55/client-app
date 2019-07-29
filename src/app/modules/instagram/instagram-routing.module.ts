@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {GreetingsComponent} from './components/greetings/greetings.component';
+import {InstagreetingsComponent} from './components/instagreetings/instagreetings.component';
 
 const routes: Routes = [{
-  path: '', component: GreetingsComponent
+  path: '', component: InstagreetingsComponent
 }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class InstaRoutingModule { }
+export class InstagramRoutingModule { }
