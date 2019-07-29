@@ -27,16 +27,17 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        use: [
+        loaders: [
           {
-            loader: 'awesome-typescript-loader'
+            loader: 'awesome-typescript-loader',
+            options: {
+              configFileName: helpers.root('tsconfig.json')
+            }
           },
-          'angular-router-loader',
-          'angular2-template-loader'
+          'angular2-template-loader',
+          'angular-router-loader'
         ],
-        exclude: [
-          /\.e2e\.ts$/
-        ]
+        exclude: [/node_modules/, /\.e2e\.ts$/]
       },
       {
         test: /[\/\\]@angular[\/\\]core[\/\\].+\.js$/,
@@ -54,16 +55,12 @@ module.exports = {
           helpers.root('src/index.html')
         ]
       },
-      // {
-      //   test: /\.html$/,
-      //   loader: 'raw-loader',
-      //   exclude: [
-      //     helpers.root('src/index.html')
-      //   ]
-      // },
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        loader: 'raw-loader',
+        exclude: [
+          helpers.root('src/index.html')
+        ]
       },
       {
         enforce: 'post',
@@ -92,4 +89,13 @@ module.exports = {
   performance: {
     hints: false
   }
+  // node        : {
+  // 	global         : true,
+  // 	crypto         : 'empty',
+  // 	process        : false,
+  // 	module         : false,
+  // 	clearImmediate : false,
+  // 	setImmediate   : false,
+  // 	fs             : 'empty'
+  // }
 };

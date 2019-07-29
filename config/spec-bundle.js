@@ -35,8 +35,6 @@ testing.TestBed.initTestEnvironment(browser.BrowserDynamicTestingModule, browser
  */
 var testContext = require.context('../src', true, /\.(test|spec).ts/);
 
-// var testContext = require.context('../src', true, /action-button.component.spec/);
-
 /**
  * Get all the files, for each file, call the context function
  * that will require the file and load it up here. Context will

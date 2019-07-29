@@ -1,26 +1,32 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "esnext",
+    "target": "es5",
+    "module": "esNext",
     "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
     "typeRoots": [
       "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
     ]
   },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+  "exclude": [
+    "node_modules",
+    "src/main.aot.ts"
+  ],
+  "paths": {
+    "@assets": [
+      "assets/"
+    ],
+    "@css-colors": [
+      "assets/css-colors"
+    ]
   }
 }

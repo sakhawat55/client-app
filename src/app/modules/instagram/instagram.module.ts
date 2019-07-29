@@ -1,15 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {InstaRoutingModule} from './instagram-routing.module';
-import {GreetingsComponent} from './components/greetings/greetings.component';
-import {SharedModule} from '../shared/shared.module';
+
+import {InstagramRoutingModule} from './instagram-routing.module';
+import {InstagreetingsComponent} from './components/instagreetings/instagreetings.component';
 
 @NgModule({
+  declarations: [InstagreetingsComponent],
   imports: [
     CommonModule,
-    InstaRoutingModule,
-    SharedModule
-  ],
-  declarations: [GreetingsComponent]
+    InstagramRoutingModule
+  ]
 })
 export class InstagramModule { }

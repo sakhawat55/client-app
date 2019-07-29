@@ -2,7 +2,7 @@
 
 const webpackMerge = require('webpack-merge');
 
-const commonConfig = require('./webpack.config.common');
+const commonConfig = require('./webpack.common-dev-server.common');
 const {root} = require('./helpers');
 
 module.exports = webpackMerge(commonConfig, {
@@ -11,7 +11,7 @@ module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-module-eval-source-map',
 
   output: {
-    path: root('..', 'public', 'dist'),
+    path: root('public', 'devdist'),
     publicPath: '/',
     filename: '[name].bundle.js',
     chunkFilename: '[id].chunk.js'
@@ -22,7 +22,10 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: [
+      '.ts',
+      '.js'
+    ]
   },
   module: {
     rules: [
@@ -38,7 +41,9 @@ module.exports = webpackMerge(commonConfig, {
           'angular2-template-loader',
           'angular-router-loader'
         ],
-        exclude: [/node_modules/]
+        exclude: [
+          /node_modules/
+        ]
       }
     ]
   },
