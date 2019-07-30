@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "esNext",
+    "module": "es6",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -27,9 +27,6 @@
     ],
     "@css-colors": [
       "assets/css-colors"
-    ],
-    "@app-config": [
-      "./app-config.ts"
     ]
   }
 }

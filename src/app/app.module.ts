@@ -1,5 +1,26 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatToolbarModule,
+  MatMenuModule,
+  MatIconModule,
+  MatCardModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatOptionModule,
+  MatSlideToggleModule
+} from '@angular/material';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {StoreModule, MetaReducer, ActionReducer, ActionReducerMap} from '@ngrx/store';
+import {localStorageSync} from 'ngrx-store-localstorage';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -10,14 +31,31 @@ export const imports = [
   HttpClientModule,
   BrowserModule,
   AppRoutingModule,
+  MatCheckboxModule,
+  MatFormFieldModule,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  BrowserAnimationsModule,
+  MatInputModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatOptionModule,
+  MatSlideToggleModule,
+  MatSidenavModule
 ];
 
 @NgModule({
   imports,
   declarations: [AppComponent],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}],
+  entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

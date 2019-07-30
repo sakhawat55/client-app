@@ -1,7 +1,9 @@
 {
-  "name": "client-app",
+  "name": "chatfront",
   "version": "0.0.0",
   "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
     "build:dev": "npm run webpack-dev",
     "build:prod": "npm run webpack-prod",
     "wpds": "NODE_ENV=webpack-dev-server webpack-dev-server --config './webpack.config.js' -d --inline --hot --progress --port 9090",
@@ -39,6 +41,7 @@
     "rxjs": "~6.3.3",
     "socket.io-client": "^2.2.0",
     "to-string-loader": "^1.1.5",
+    "ts-loader": "^5.3.3",
     "tslib": "^1.9.0",
     "webpack": "^4.29.6",
     "zone.js": "~0.8.26"

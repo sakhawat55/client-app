@@ -1,0 +1,7 @@
+app/components/cruise-control
+app/routes/campaign-dashboard
+app/shared/fonts/xufont/demo-files
+node_modules
+dist
+log
+typings
