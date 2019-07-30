@@ -26,9 +26,10 @@ import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {APP_BASE_HREF} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
+import {SharedModule} from './modules/shared/shared.module';
+import {HttpModule} from '@angular/http';
 
 export const imports = [
-  HttpClientModule,
   BrowserModule,
   AppRoutingModule,
   MatCheckboxModule,
@@ -48,7 +49,9 @@ export const imports = [
   MatSelectModule,
   MatOptionModule,
   MatSlideToggleModule,
-  MatSidenavModule
+  MatSidenavModule,
+  SharedModule,
+  HttpModule
 ];
 
 @NgModule({
@@ -56,6 +59,7 @@ export const imports = [
   declarations: [AppComponent],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   entryComponents: [AppComponent],
+  exports: [SharedModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

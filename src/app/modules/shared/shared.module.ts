@@ -7,6 +7,7 @@ import {SingleActionButtonComponent} from './components/single-action-button/sin
   declarations: [ActionButtonsComponent, SingleActionButtonComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [ActionButtonsComponent, SingleActionButtonComponent]
 })
 export class SharedModule { }

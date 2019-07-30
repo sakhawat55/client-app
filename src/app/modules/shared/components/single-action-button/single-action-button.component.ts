@@ -11,7 +11,7 @@ import {ActionButton} from '../../interfaces';
 export class SingleActionButtonComponent implements OnInit {
 
   @Input() config: ActionButton;
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
