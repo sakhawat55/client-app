@@ -1,6 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ActionButtonsComponent } from './action-buttons.component';
+import {ActionButtonsComponent} from './action-buttons.component';
+import {CommonModule} from '@angular/common';
+import {ActionButton} from '../../interfaces';
+import {SingleActionButtonComponent} from '../single-action-button/single-action-button.component';
 
 describe('ActionButtonsComponent', () => {
   let component: ActionButtonsComponent;
@@ -8,14 +11,24 @@ describe('ActionButtonsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActionButtonsComponent ]
+      declarations: [ ActionButtonsComponent, SingleActionButtonComponent ],
+      imports: [CommonModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ActionButtonsComponent);
     component = fixture.componentInstance;
+    const configs: ActionButton[] = [
+      {
+        type: 'ref',
+        text: 'insta people',
+        routerLink: 'insta people'
+      }
+    ];
+
+    component.configs = configs;
     fixture.detectChanges();
   });
 
