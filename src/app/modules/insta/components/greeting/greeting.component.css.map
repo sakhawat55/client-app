@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "greeting.component.scss"
+    ],
+    "names": [],
+    "file": "greeting.component.css"
+}

@@ -10,7 +10,7 @@
     "install:dev-tools:for-building": "npm install --only=dev",
     "webpack-dev": "NODE_ENV=development webpack --config './webpack.config.js'",
     "webpack-prod": "NODE_ENV=production webpack --config './webpack.config.js'",
-    "test": "node_modules/.bin/karma start ./karma.conf.js",
+    "test": "karma start ./karma.conf.js",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -90,5 +90,17 @@
     "url-loader": "^1.1.2",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.2.1"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakhawat55/client-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sakhawat55/client-app/issues"
+  },
+  "homepage": "https://github.com/sakhawat55/client-app#readme"
 }
